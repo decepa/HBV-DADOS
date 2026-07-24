@@ -300,3 +300,51 @@ Utilizar o Dados de Mercado como fonte inicial para coleta de indicadores fundam
 Próxima etapa:
 
 Criar script de teste para extração dos indicadores de uma ação antes da gravação no banco.
+---
+
+## 24/07/2026 - Decisão arquitetura indicadores históricos
+
+Análise realizada:
+
+Para cálculo de preço teto projetado, apenas o indicador atual não é suficiente.
+
+
+Decisão:
+
+Manter a tabela indicadores como snapshot atual.
+
+Criar uma estrutura histórica para armazenar evolução trimestral e anual.
+
+
+Objetivo:
+
+Permitir projeções de:
+
+- Graham;
+- Bazin;
+- Gordon;
+- crescimento de lucro;
+- crescimento de dividendos;
+- preço teto HBV.
+
+
+Dados históricos planejados:
+
+- lucro líquido;
+- receita líquida;
+- ROE;
+- ROIC;
+- margens;
+- dívida;
+- patrimônio;
+- dividendos.
+
+
+Motivo:
+
+O HBV precisa analisar qualidade e crescimento, não apenas preço atual.
+
+
+Próxima etapa:
+
+Criar tabela indicadores_historico.
