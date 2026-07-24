@@ -265,3 +265,38 @@ Campos planejados:
 Próxima etapa:
 
 Definir fonte pública de fundamentos e iniciar coleta.
+---
+
+## 24/07/2026 - Mapeamento de indicadores concluído
+
+Teste realizado:
+
+Ativo:
+BBAS3
+
+
+Fonte analisada:
+
+Dados de Mercado
+
+
+Indicadores encontrados no HTML:
+
+- P/L
+- P/VP
+- ROE
+- ROIC
+- Margem líquida
+- Receita líquida
+- Lucro líquido
+- Dados históricos
+
+
+Decisão:
+
+Utilizar o Dados de Mercado como fonte inicial para coleta de indicadores fundamentalistas.
+
+
+Próxima etapa:
+
+Criar script de teste para extração dos indicadores de uma ação antes da gravação no banco.
