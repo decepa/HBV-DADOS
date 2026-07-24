@@ -17,7 +17,7 @@ def buscar_empresas(cursor):
 
 def salvar_cotacao(cursor, dados):
     cursor.execute("""
-    INSERT INTO cotacoes
+    INSERT OR REPLACE INTO cotacoes
     (
         ticker,
         data,
@@ -40,6 +40,7 @@ print("=" * 50)
 print("COLETA DE COTAÇÕES HBV-DADOS")
 print(datetime.now())
 print("=" * 50)
+
 
 for ticker in acoes:
 
@@ -96,6 +97,7 @@ for ticker in acoes:
 
 conexao.commit()
 conexao.close()
+
 
 print("=" * 50)
 print("COLETA FINALIZADA")
