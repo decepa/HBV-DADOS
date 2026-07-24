@@ -1,0 +1,11 @@
+ticker,razao_social,nome_fantasia,setor,subsetor,segmento,tipo_empresa
+ABEV3,Ambev SA,Ambev,Bebidas,Alimentos e Bebidas,Bebidas,Privada
+BBAS3,Banco do Brasil SA,Banco do Brasil,Financeiro,Bancos,Banco,Mista
+BBSE3,Banco do Brasil Seguridade SA,BB Seguridade,Financeiro,Seguros,Seguradora,Privada
+ITSA4,Itausa SA,Itausa,Financeiro,Bancos e Holdings,Holding,Privada
+PETR4,Petroleo Brasileiro SA,Petrobras,Petróleo,Energia,Exploração,Estatal
+VALE3,VALE SA,VALE,Mineração,Mineração,Ferro,Privada
+WEGE3,Weg SA,Weg,Industrial,Máquinas,Equipamentos,Privada
+POMO3,Marcopolo SA,Marcopolo,Industrial,Transportes,Veículos,Privada
+EGIE3,Engie Brasil SA,Engie,Energia,Elétrica,Geração,Privada
+TAEE11,Transmissora Alianca de Energia Eletrica SA,Taesa,Energia,Elétrica,Transmissão,Privada
