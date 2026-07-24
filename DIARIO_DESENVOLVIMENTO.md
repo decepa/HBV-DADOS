@@ -570,3 +570,20 @@ Nunca misturar dados trimestrais com anuais nos cálculos de valuation.
 Próxima etapa:
 
 Ajustar coletor histórico para identificar automaticamente o tipo_periodo antes da gravação no banco.
+
+## 24/07/2026
+
+### Alteração realizada
+
+- Arquivo:
+  scripts/nome_do_arquivo.py
+
+- Descrição:
+  ...
+
+- Teste realizado:
+  ...
+
+- Resultado:
+  ...
+
