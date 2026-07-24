@@ -348,3 +348,46 @@ O HBV precisa analisar qualidade e crescimento, não apenas preço atual.
 Próxima etapa:
 
 Criar tabela indicadores_historico.
+---
+
+## 24/07/2026 - Criada tabela indicadores_historico
+
+Alteração realizada:
+
+Criada nova tabela:
+
+indicadores_historico
+
+
+Objetivo:
+
+Armazenar evolução trimestral e anual dos fundamentos das empresas.
+
+
+Campos armazenados:
+
+- lucro líquido;
+- receita líquida;
+- ROE;
+- ROIC;
+- margens;
+- dívida;
+- patrimônio;
+- dividendos;
+- fonte;
+- data da coleta.
+
+
+Motivo:
+
+Permitir projeções de preço teto utilizando histórico de resultados.
+
+
+Status:
+
+Tabela criada e validada no SQLite.
+
+
+Próxima etapa:
+
+Criar coletor de indicadores históricos.
