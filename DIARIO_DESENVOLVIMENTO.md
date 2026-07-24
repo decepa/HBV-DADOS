@@ -221,3 +221,47 @@ A base oficial deve preservar todos os ativos cadastrados.
 Próxima etapa:
 
 Criar módulo de indicadores fundamentalistas.
+---
+
+## 24/07/2026 - Início módulo de indicadores
+
+Verificação realizada:
+
+- tabela indicadores existente;
+- tabela sem registros;
+- não existem scripts de fundamentos.
+
+Decisão:
+
+Criar novo módulo:
+
+scripts/coletar_indicadores.py
+
+
+Objetivo:
+
+Popular a tabela indicadores com dados fundamentalistas para alimentar:
+
+- Graham;
+- Bazin;
+- Gordon;
+- Ranking HBV.
+
+
+Campos planejados:
+
+- PL
+- PVP
+- DY
+- ROE
+- ROIC
+- Margem líquida
+- Margem EBIT
+- Dívida líquida/EBITDA
+- Lucro 12 meses
+- Receita 12 meses
+
+
+Próxima etapa:
+
+Definir fonte pública de fundamentos e iniciar coleta.
