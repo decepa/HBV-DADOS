@@ -391,3 +391,182 @@ Tabela criada e validada no SQLite.
 Próxima etapa:
 
 Criar coletor de indicadores históricos.
+---
+
+## 24/07/2026 - Análise estrutura histórico Dados de Mercado
+
+Foi realizado teste de extração da página individual das ações.
+
+Ticker testado:
+
+BBAS3
+
+
+Resultado:
+
+Foram encontradas 8 tabelas HTML.
+
+
+Identificadas:
+
+
+Tabela 0:
+
+Indicadores anuais.
+
+Dados encontrados:
+
+- P/L
+- P/VP
+- PSR
+- LPA
+- VPA
+- ROE
+- margens
+
+
+Tabela 2:
+
+Histórico trimestral patrimonial.
+
+
+Tabela 4:
+
+Histórico trimestral de resultados.
+
+
+Decisão:
+
+O coletor histórico utilizará as tabelas trimestrais e anuais para alimentar:
+
+indicadores_historico
+
+
+Objetivo:
+
+Permitir cálculo de:
+
+- crescimento de lucro;
+- média histórica;
+- projeções;
+- preço teto HBV;
+- margem de segurança.
+
+
+Próxima etapa:
+
+Criar coletor automático de indicadores históricos.
+---
+
+## 24/07/2026 - Primeiro teste coletor histórico indicadores
+
+Criado:
+
+scripts/coletar_indicadores_historico.py
+
+
+Teste realizado:
+
+Ticker:
+
+BBAS3
+
+
+Resultado:
+
+65 registros inseridos na tabela:
+
+indicadores_historico
+
+
+Dados coletados:
+
+- Receita líquida trimestral
+- Períodos históricos
+
+
+Validação:
+
+SELECT COUNT(*) FROM indicadores_historico;
+
+Resultado:
+
+65 registros
+
+
+Observações encontradas:
+
+Alguns períodos precisam tratamento:
+
+- valores anuais aparecem misturados com dados trimestrais;
+- alguns campos retornam zero;
+- será necessário validar tipo_periodo antes da coleta definitiva.
+
+
+Decisão:
+
+Não expandir para todas as ações ainda.
+
+Primeiro corrigir tratamento dos períodos.
+
+
+Próxima etapa:
+
+Ajustar coletor histórico para separar:
+
+- trimestre;
+- ano;
+- TTM.
+---
+
+## 24/07/2026 - Padronização de períodos históricos
+
+Durante o primeiro teste do coletor de indicadores históricos da BBAS3 foram identificados períodos de diferentes naturezas na mesma fonte.
+
+Foram encontrados:
+
+- períodos trimestrais;
+- períodos anuais;
+- períodos TTM.
+
+Decisão do projeto:
+
+A tabela indicadores_historico deverá armazenar o tipo do período corretamente.
+
+Classificações:
+
+TRIMESTRAL:
+- 1T2026
+- 2T2025
+- 3T2025
+- 4T2025
+
+ANUAL:
+- 2025
+- 2024
+- 2023
+
+TTM:
+- períodos acumulados dos últimos 12 meses.
+
+
+Motivo:
+
+O motor HBV utilizará os dados históricos para:
+
+- projeção de lucro;
+- crescimento;
+- preço teto;
+- Graham;
+- Bazin;
+- Gordon.
+
+
+Regra:
+
+Nunca misturar dados trimestrais com anuais nos cálculos de valuation.
+
+
+Próxima etapa:
+
+Ajustar coletor histórico para identificar automaticamente o tipo_periodo antes da gravação no banco.
